@@ -17,11 +17,10 @@ directory, you will need to remove them first.
 Modify `vimrc` to suit your needs. Add bundles to the list in
 `vim/vundle-config.vim` to have Vundle install them by running `:BundleInstall`.
 
-Right now, these bundles are enabled by default:
+Right now, these bundles are enabled by default, using vim-addon-manager:
 
 * NERDTree
 * fisa colorscheme
-* Powerline
 
 ## Copying
 

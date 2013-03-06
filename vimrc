@@ -13,9 +13,6 @@ set encoding=utf8
 " disable filetype during setup
 filetype off
 
-" load Vundle and bundles
-source ~/.vim/vundle-config.vim
-
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " indentation settings
 """"""""""""""""""""""""""""""""""""""""""""""""""
@@ -85,6 +82,27 @@ set autoread                " read files when modified
 set autowrite               " write when changing buffers
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+" gvim settings
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set guioptions-=m   " remove menu bar
+set guioptions-=T   " remove toolbar
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+" addon settings
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" install VAM if needed
+source ~/.vim/vam-install.vim
+call InstallVAM()
+
+" enable plugins
+call vam#ActivateAddons([
+    \ 'github:scrooloose/nerdtree',
+    \ 'github:fisadev/fisa-vim-colorscheme',
+    \], {'auto_install' : 0})
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 " theme settings
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -99,17 +117,6 @@ else
     " terminal colorscheme
     colorscheme fisa
 endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" gvim settings
-""""""""""""""""""""""""""""""""""""""""""""""""""
-
-set guioptions-=m   " remove menu bar
-set guioptions-=T   " remove toolbar
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-" plugin settings
-""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " enable filetype settings for plugins, not indenting
 filetype plugin on
