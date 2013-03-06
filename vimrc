@@ -100,7 +100,12 @@ call InstallVAM()
 call vam#ActivateAddons([
     \ 'github:scrooloose/nerdtree',
     \ 'github:fisadev/fisa-vim-colorscheme',
+    \ 'vimwiki',
     \], {'auto_install' : 0})
+
+" Plugin: vimwiki
+let g:vimwiki_list = [{'path': '~/stuff/vimwiki'}]
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 " theme settings
@@ -117,6 +122,7 @@ else
     " terminal colorscheme
     colorscheme fisa
 endif
+
 
 " enable filetype settings for plugins, not indenting
 filetype plugin on
