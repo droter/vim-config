@@ -100,7 +100,6 @@ call InstallVAM()
 call vam#ActivateAddons([
     \ 'github:scrooloose/nerdtree',
     \ 'github:fisadev/fisa-vim-colorscheme',
-    \ 'vimwiki',
     \], {'auto_install' : 0})
 
 " Plugin: vimwiki
